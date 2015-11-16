@@ -82,6 +82,19 @@ class osgwnclient {
 		options	=> "defaults,soft",
 		remounts	=> true,
 		target	=> "/etc/fstab",
-		}
+	}
 
+	service {"fetch-crl-boot":
+    ensure  => running,
+    enable  => true,
+    hasstatus  => true,
+    hasrestart => true,
+  }
+
+	service {"fetch-crl-cron":
+    ensure  => running,
+    enable  => true,
+    hasstatus  => true,
+    hasrestart => true,
+  }
 }
