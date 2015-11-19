@@ -4,10 +4,6 @@
 
 class osgwnclient {
 
-	yumrepo { 'osg-3.2-el6-release':
-		enabled         => 0,
-	}
-
 	package { yum-priorities:	name => "yum-plugin-priorities",	ensure => installed, }
 
 	package { osg-wn-client:
