@@ -77,8 +77,6 @@ class osgwnclient {
   file { "/var/lib/codor-ce":
 		ensure	=> directory,
 		name 		=> "/var/lib/condor-ce",
-		owner		=> "root",
-		group		=> "root",
 		mode		=> "0777",
 	}
 	mount { "/var/lib/condor-ce":
