@@ -12,6 +12,10 @@ class osgwnclient {
 		require => Package["yum-priorities"],
 	}
 
+	package { osg-ca-certs:
+	  ensure => latest,
+	}
+
 	#package { glexec:
 	#	name => "glexec.x86_64",
 	#	ensure => installed,
