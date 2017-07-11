@@ -8,9 +8,9 @@ class osgwnclient {
     ensure => installed,
   }
 
-  package { 'osg-wn-client',
+  package { 'osg-wn-client':
     ensure  => installed,
-    require => Package['yum-priorities'],
+    require => Package['yum-plugin-priorities'],
   }
 
   package { 'osg-ca-certs':
@@ -19,7 +19,7 @@ class osgwnclient {
 
   package { 'symlinks':
     ensure  => installed,
-    require => Package['yum-priorities'],
+    require => Package['yum-plugin-priorities'],
   }
 
   ## Torque *requires* a home directory to be present.  Sigh.
