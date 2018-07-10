@@ -17,6 +17,10 @@ class osgwnclient {
     ensure => latest,
   }
 
+  package { 'singularity':
+    ensure => latest, # it has several suid root binaries
+  }
+
   package { 'symlinks':
     ensure  => installed,
     require => Package['yum-plugin-priorities'],
